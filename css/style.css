@@ -196,5 +196,29 @@ table td {
     width: 100px;
 }
 
+.users-leaders {
+    width: 300px;
+    position: fixed;
+    top: 221px;
+    left: 30px;
+}
 
+.users-leaders th {
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    background: yellow;
+    border:1px solid #000;
+
+}
+
+.users-leaders td {
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.users-leaders td:nth-child(2) {
+    width: 60px;
+}
 

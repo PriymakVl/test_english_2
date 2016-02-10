@@ -63,22 +63,15 @@
         </table>
         <a href="#" onclick="return false" id="logout">Выйти</a>
     </div>
-    <table class="users_leaders">
+    <table class="users-leaders">
         <tr>
-            <th>Лидирующая тройка</th>
+            <th colspan="2">Лидирующая тройка</th>
         </tr>
-        <tr>
-            <td>Владимир</td>
-            <td>234</td>
-        </tr>
-        <tr>
-            <td>Максим</td>
-            <td145></td145>
-        </tr>
-        <tr>
-            <td>Дима</td>
-            <td>22</td>
-        </tr>
+        <?php
+            if(isset($leaders[0])) echo "<tr><td>{$leaders[0]['login']}</td><td>{$leaders[0]['count_test']}</td></tr>";
+            if(isset($leaders[1])) echo "<tr><td>{$leaders[1]['login']}</td><td>{$leaders[1]['count_test']}</td></tr>";
+            if(isset($leaders[2])) echo "<tr><td>{$leaders[2]['login']}</td><td>{$leaders[2]['count_test']}</td></tr>";
+        ?>
     </table>
     <div class="auth-form" <?php if($user) echo 'style="display:none"'?>>
         <span class="error-auth"><?=$error_auth?></span>

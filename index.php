@@ -1,6 +1,7 @@
 <?php
 
 require_once 'models/model_words.php';
+require_once 'models/model_users.php';
 require_once 'lib.php';
 
 $user_display = null;
@@ -38,6 +39,8 @@ $num_check = rand(0, 4);
 $show_words = isset($_GET['show']) ? $_GET['show'] + 1 : 1;
 $remain_words = $length_test - $show_words;
 $num_answers = isset($_GET['answers']) ? $_GET['answers'] : 0;
+
+$leaders = getLeaders($pdo);
 
 
 require_once 'view/main_view.php';

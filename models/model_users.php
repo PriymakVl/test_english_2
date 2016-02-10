@@ -23,3 +23,8 @@ function setUser($login, $pass, $pdo) {
     $stmt = $pdo->prepare("INSERT INTO `users` SET `login` = :login, `pass` = :pass");
     return $stmt->execute(array(':login' => $login, ':pass' => $pass));
 }
+
+function getLeaders ($pdo) {
+    $stmt = $pdo->query("SELECT `login`, `count_test` FROM `users` ORDER BY `count_test` DESC LIMIT 3");
+    return $stmt->fetchAll();
+}
